@@ -2,7 +2,7 @@
   "name": "puzzle_people",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://puzzlepeoplenft.com",
+  "homepage": "https://vyassathya.github.io/puzzlepeopleethclient/",
   "dependencies": {
     "@ethersproject/providers": "^5.5.0",
     "@ethersproject/wallet": "^5.5.0",
