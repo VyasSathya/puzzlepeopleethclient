@@ -2,6 +2,7 @@
   "name": "puzzle_people",
   "version": "0.1.0",
   "private": true,
+  "homepage": "www.puzzlepeoplenft.com",
   "dependencies": {
     "@ethersproject/providers": "^5.5.0",
     "@ethersproject/wallet": "^5.5.0",
@@ -22,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
