@@ -1,0 +1,45 @@
+@import '../../styles/mixins';
+
+.faces {
+  padding: 147px 0;
+  overflow: hidden;
+
+  @include mobile {
+    padding: 57px 0;
+  }
+
+  .swiper-slide {
+    display: inline-block;
+    width: auto;
+  } 
+
+  & img {
+    // width: 270px;
+    min-height: 270px;
+    // min-height: 0;
+    // @media (min-width: 1400px) {
+    //   min-height: 270px;
+    // }
+  }
+
+  // .slick-list {
+  //   animation: trackAnimation 20s infinite alternate ease-in-out;
+  //   animation-delay: 1s, 10s;
+  //   overflow: visible;
+  // }
+}
+
+// @keyframes trackAnimation {
+//   0% {
+//     transform: translate3d(0, 0px, 0px);
+//   }
+//   25% {
+//     transform: translate3d(-2050px, 0px, 0px);
+//   }
+//   50% {
+//     transform: translate3d(-1300px, 0px, 0px);
+//   }
+//   100% {
+//     transform: translate3d(-2000px, 0px, 0px);
+//   }
+// }

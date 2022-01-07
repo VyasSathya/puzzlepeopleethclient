@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+
+@import 'swiper/swiper-bundle.css';
+
+@import './styles/common.scss';
+@import './styles/mixins';
+@import './styles/variables';
+@import './styles/buttons';
+@import './styles/titles';
+
+body {
+  color: #9a9a9a;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(105.94deg, #061215 -2.92%, #282822 95.73%);
+}
+
+.container {
+  max-width: Min(100%, var(--container-width));
+  margin: 0 auto;
+  padding: 0 30px;
+
+  &_s {
+    max-width: Min(100%, calc(var(--container-width) - 150px));
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
+}

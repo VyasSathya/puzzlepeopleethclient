@@ -1,0 +1,178 @@
+@import '../../styles/mixins';
+
+.promo {
+  background: url('../../assets/img/promo-bg.png') center (center/cover)
+    no-repeat;
+  background-position: 0 140px;
+  min-height: 100vh;
+
+  @include mobile {
+    background-position: 0 0;
+  }
+
+  &__wrapper {
+    padding-top: 90px;
+    padding-bottom: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      padding-bottom: 90px;
+    }
+  }
+  &-deposit{
+    background: var(--main-yellow);
+    border-radius: 11px;
+    max-width: 272px;
+    margin-bottom: 21px;
+  }
+  &-deposit__input{
+    background: var(--main-yellow);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    padding: 25px 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & input{
+      display: none;
+    }
+    & button{
+      padding: 15px 8px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+  }
+  &-deposit__input-value{
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.55);
+    margin: 0 22px;
+  }
+  &-deposit__button{
+       width: 100%;
+       padding: 13px 0;
+  }
+
+  &-mint{
+    max-width: 272px;
+  }
+  &-mint__input{
+    background: transparent;
+    border-radius: 11px;
+    border: 1px solid var(--main-yellow);
+    font-family: 'Poppins';
+    padding: 9px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    & input{
+      display: none;
+    }
+    & button{
+      padding: 15px 8px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+  }
+  &-mint__input-value{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 18px !important;
+    & > span{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: var(--main-yellow);
+    }
+  }
+  &-mint__button{
+       width: 100%;
+       padding: 13px 0;
+  }
+  &-mint__remain{
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    & span:first-of-type{
+      color: var(--main-yellow);
+    }
+    & span:last-of-type{
+      font-weight: 400;
+    }
+    
+  }
+
+  &__descr {
+    max-width: 460px;
+
+    & h1 {
+      font-family: 'Passero One', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 70px;
+      line-height: 94px;
+      color: var(--main-yellow);
+      text-shadow: -1px 2px 0px #fff5c1;
+
+      & span {
+        font-size: 122px;
+        @include mobile {
+          font-size: 107px;
+        }
+      }
+
+      @include mobile {
+        font-size: 64px;
+        text-align: center;
+      }
+    }
+
+    & p {
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__descr-btns {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__images {
+    max-width: 626px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+.deposit-btn{
+  margin-bottom: 20px;
+}

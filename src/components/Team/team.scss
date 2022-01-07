@@ -1,0 +1,88 @@
+@import '../../styles/mixins';
+
+.team {
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  &__descr {
+    text-align: center;
+
+    & p {
+      max-width: 794px;
+      margin: 0 auto;
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      color: var(--text-secondary);
+
+      @include mobile {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &__members-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__member {
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin: 0 auto;
+      display: flex !important;
+    }
+
+    & img {
+      box-shadow: 0px 46px 39px -29px rgba(0, 0, 0, 0.25);
+    }
+
+    & h4 {
+      font-family: 'Passero One', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 72px;
+      color: var(--main-yellow);
+      text-align: center;
+    }
+
+    & p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160.9%;
+      color: #aaaaaa;
+      text-align: center;
+    }
+  }
+
+  &__mobile-slider {
+    display: none;
+    margin-top: 28px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    @include mobile {
+      display: block;
+    }
+  }
+}

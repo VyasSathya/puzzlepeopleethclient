@@ -1,0 +1,199 @@
+@import '../../styles/mixins';
+
+.stat {
+  background: url('../../assets/img/stat-bg.png') center (center/cover)
+    no-repeat;
+  background-position: 0 240px;
+
+  &__wrapper {
+    min-height: 1015px;
+    padding-top: 100px;
+    padding-bottom: 180px;
+
+    @include tablet {
+      padding-top: 468px;
+      overflow: hidden;
+      min-height: 2000px;
+    }
+  }
+
+  &__wood {
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__signs {
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__single-sign {
+    position: relative;
+
+    &_s1 {
+      width: 230px;
+      top: 180px;
+      left: 50px;
+
+      &::before {
+        content: url('../../assets/img/stat-1.png');
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        z-index: -1;
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        &:after {
+          content: url('../../assets/img/stat-wood.png');
+          position: absolute;
+          bottom: 270px;
+          left: -50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_s2 {
+      width: 230px;
+      top: 400px;
+      left: 120px;
+
+      &::before {
+        content: url('../../assets/img/stat-2.png');
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        z-index: -2;
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 430px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          content: url('../../assets/img/stat-2-mobile.png');
+          position: absolute;
+          bottom: -50px;
+          left: -50px;
+          z-index: -2;
+        }
+        &:after {
+          content: url('../../assets/img/stat-wood.png');
+          position: absolute;
+          bottom: 220px;
+          right: -50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_s3 {
+      width: 190px;
+      top: 130px;
+      left: 210px;
+      z-index: 2;
+
+      @include container {
+        left: calc(100vw - 970px);
+      }
+
+      &::before {
+        content: url('../../assets/img/stat-3.png');
+        position: absolute;
+        bottom: -50px;
+        left: -65px;
+        z-index: -1;
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 860px;
+        left: 50%;
+        transform: translateX(-50%);
+        &:after {
+          content: url('../../assets/img/stat-wood.png');
+          position: absolute;
+          bottom: 220px;
+          left: -50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_s4 {
+      width: 200px;
+      top: 320px;
+      left: 210px;
+      z-index: 1;
+
+      @include container {
+        position: absolute;
+        left: unset;
+        right: 50px;
+      }
+
+      &::before {
+        content: url('../../assets/img/stat-4.png');
+        position: absolute;
+        bottom: -40px;
+        left: -65px;
+        z-index: -1;
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 1230px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          content: url('../../assets/img/stat-4-mobile.png');
+          position: absolute;
+          bottom: -40px;
+          left: -65px;
+          z-index: -2;
+        }
+        &:after {
+          content: url('../../assets/img/stat-wood.png');
+          position: absolute;
+          bottom: 150px;
+          right: -50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    & h4 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+      color: var(--main-yellow);
+    }
+
+    & p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 27px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}

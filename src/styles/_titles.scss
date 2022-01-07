@@ -1,0 +1,23 @@
+@import './mixins';
+
+.title {
+  font-family: 'Passero One', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59px;
+  text-transform: uppercase;
+  color: var(--main-yellow);
+
+  @include tablet {
+    font-size: 36px;
+  }
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--green-text);
+}

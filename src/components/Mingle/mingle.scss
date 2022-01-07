@@ -1,0 +1,71 @@
+@import '../../styles/mixins';
+
+.mingle {
+  background-color: var(--secondary-bg);
+
+  &__wrapper {
+    padding-top: 195px;
+    padding-bottom: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include tablet {
+      padding-top: 90px;
+      padding-bottom: 90px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    max-width: 522px;
+    max-height: 522px;
+    margin-right: 78px;
+    position: relative;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: url('../../assets/img/wheat-pack.png');
+      position: absolute;
+      bottom: -38%;
+      left: -91%;
+      z-index: 0;
+
+      @include tablet {
+        bottom: -35%;
+        left: -55%;
+        transform: scale(0.55);
+      }
+    }
+  }
+
+  &__descr {
+    max-width: 560px;
+
+    @include tablet {
+      margin-top: 100px;
+    }
+
+    & h2 {
+      margin-top: 19px;
+    }
+
+    & p {
+      margin-top: 19px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--text-secondary);
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+}
