@@ -5,14 +5,14 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
 import PuzzlePeople from '../../abis/ABI.json';
 
-const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
+const Promo = ({  }) => {
   // const [isDepositInputShown, setDepositInputShown] = useState(false)
   // const [isMintInputShown, setMintInputShown] = useState(false)
-  const [remainingPuzz, setRemainingPuzz] = useState('10000')
-
+  const [remainingPups, setRemainingPups] = useState('10000')
+  const [sellStatus, setSellStatus] = useState('connect wallet')
   const [depositValue, setDepositValue] = useState(1)
   const [mintValue, setMintValue] = useState(1)
-  const address = '0xA99E44EDfCa434ffD08a06537656b7bB1355C858';
+  const address = '0xA50C1a64Fc9cEbD4a134DC078189Ee2A1a3ACe93';
 
   const connectWallet = async () => {
     console.log('calling');
@@ -47,11 +47,10 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
       const MyContract = new web3.eth.Contract( abi, address );
       const tokensLeft = await MyContract.methods.getTokensLeft().call();
       console.log('NFT Left: ', tokensLeft);
-      setRemainingPuzz(tokensLeft);;
+      setRemainingPups(tokensLeft);
       
     } else {
       window.alert('Please Connect a MetaMask Account');
-      return;
     }
     setSellStatus('start')
   }
@@ -103,7 +102,7 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
       const MyContract = new web3.eth.Contract( abi, address );
       const tokensLeft = await MyContract.methods.getTokensLeft().call();
       console.log('NFT Left: ', tokensLeft);
-      setRemainingPuzz(tokensLeft);
+      setRemainingPups(tokensLeft);
       console.log( 'Number to buy: ', num );
       const currPrice = await MyContract.methods.getPrice().call();
       console.log( 'Current price: ', currPrice );
@@ -163,7 +162,7 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
               <button onClick={connectWallet} className='btn btn_outline btn_disabled'>Connect Wallet</button>
             )}
             {sellStatus === 'start' &&
-              (userWallet ? (
+              (true ? (
                 <div className='promo-mint'>
                 <div className='promo-mint__input'>
                   <input
@@ -193,7 +192,7 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
                   {/* Mint {(mintValue * 0.030).toFixed(3)} ETH */}
                 </button>
                 <div className='promo-mint__remain'>
-                  <span>{remainingPuzz}</span>/10000{' '}
+                  <span>{remainingPups}</span>/10000{' '}
                   <span>remaining</span>
                 </div>
               </div>
