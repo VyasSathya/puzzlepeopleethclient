@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './promo.scss'
 import promoImg from '../../assets/img/promo-img.png'
-import { IMXSetUp, depositFor, mintNftTokens } from '../../IMXFunctions'
-import { isWalletAddress } from '../../helpers/helper'
 import detectEthereumProvider from '@metamask/detect-provider'; 
 import Web3 from 'web3';
 import PuzzlePeople from '../../abis/ABI.json';
 
 const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
-  const [isDepositInputShown, setDepositInputShown] = useState(false)
-  const [isMintInputShown, setMintInputShown] = useState(false)
+  // const [isDepositInputShown, setDepositInputShown] = useState(false)
+  // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPuzz, setRemainingPuzz] = useState('10000')
 
   const [depositValue, setDepositValue] = useState(1)
@@ -59,15 +57,15 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
   }
 }
 
-  const openDepositInput = () => {
-    setMintInputShown(false)
-    setDepositInputShown(true)
-  }
+  // const openDepositInput = () => {
+  //   setMintInputShown(false)
+  //   setDepositInputShown(true)
+  // }
 
-  const openMintInput = () => {
-    setMintInputShown(true)
-    setDepositInputShown(false)
-  }
+  // const openMintInput = () => {
+  //   setMintInputShown(true)
+  //   setDepositInputShown(false)
+  // }
 
   const mintNfts = async (num) => {
 
@@ -118,9 +116,11 @@ const Promo = ({ userWallet, setUserWallet, sellStatus, setSellStatus }) => {
         gasPrice: "20000000000",
         value: requiredAmount,
       });
+      console.log(val);
     } else {
       window.alert('Please Connect a MetaMask Account');
     }
+    
   }
   const decreaseMint = () => {
     if (mintValue > 1) {

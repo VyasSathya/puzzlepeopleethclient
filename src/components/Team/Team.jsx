@@ -67,7 +67,6 @@ const Team = () => {
           slidesPerView={1.2}
           centeredSlides={true} 
           loop={true}
-          centeredSlides={true} 
           speed={500}
           >
             <SwiperSlide>

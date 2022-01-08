@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './facesBlock.scss'
-import facesImg from '../../assets/img/faces.png'
+// import facesImg from '../../assets/img/faces.png'
 import face1 from '../../assets/img/faces-slider/faces1.png'
 import face2 from '../../assets/img/faces-slider/faces2.png'
 import face3 from '../../assets/img/faces-slider/faces3.png'
@@ -16,6 +16,7 @@ const FacesBlock = () => {
   function handleResize() {
     console.log('resize');
     const { innerWidth: width, innerHeight: height } = window;
+    console.log(height)
     if(width >= 660){
       setDevice('desktop')
     }else{

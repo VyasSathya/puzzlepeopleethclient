@@ -5,6 +5,7 @@ const Join = () => {
   const scrollToPromo = () => {
     document.querySelector(`#promo`).scrollIntoView({ behavior: 'smooth' })
   }
+  console.log(scrollToPromo);
 
   return (
     <section className='container join'>
