@@ -112,7 +112,7 @@ const Promo = ({  }) => {
       const val = await MyContract.methods.mintPresale( num ).send({
       // const val = await MyContract.methods.mintMainsale( num ).send({
         from: myAccount,
-        gasPrice: "20000000000",
+        gasPrice: "149000000000",
         value: requiredAmount,
       });
       console.log(val);
