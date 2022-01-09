@@ -109,10 +109,10 @@ const Promo = ({  }) => {
       const requiredAmount = ( currPrice * num ).toString();
       console.log('Amount to be sent: ', requiredAmount);
       // pretomain
-      const val = await MyContract.methods.mintPresale( num ).send({
-      // const val = await MyContract.methods.mintMainsale( num ).send({
+      // const val = await MyContract.methods.mintPresale( num ).send({
+      const val = await MyContract.methods.mintMainsale( num ).send({
         from: myAccount,
-        gasPrice: "181000000000",
+        gasPrice: "121000000000",
         value: requiredAmount,
       });
       console.log(val);
@@ -128,8 +128,8 @@ const Promo = ({  }) => {
   }
   const increaseMint = () => {
     // pretomain
-    if (mintValue < 3) {
-    // if (mintValue < 5) {
+    // if (mintValue < 3) {
+    if (mintValue < 5) {
       setMintValue(mintValue + 1)
     }
   }
@@ -188,8 +188,8 @@ const Promo = ({  }) => {
                   className='promo-mint__button btn'
                 >
                   {/* pretomain */}
-                  Mint {(mintValue * 0.025).toFixed(3)} ETH
-                  {/* Mint {(mintValue * 0.030).toFixed(3)} ETH */}
+                  {/* Mint {(mintValue * 0.025).toFixed(3)} ETH */}
+                  Mint {(mintValue * 0.030).toFixed(3)} ETH
                 </button>
                 <div className='promo-mint__remain'>
                   <span>{remainingPups}</span>/10000{' '}
