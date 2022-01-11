@@ -9,7 +9,8 @@ const Promo = ({  }) => {
   // const [isDepositInputShown, setDepositInputShown] = useState(false)
   // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPups, setRemainingPups] = useState('10000')
-  const [sellStatus, setSellStatus] = useState('connect wallet')
+  // const [sellStatus, setSellStatus] = useState('connect wallet')
+  const [sellStatus, setSellStatus] = useState('paused')
   const [depositValue, setDepositValue] = useState(1)
   const [mintValue, setMintValue] = useState(1)
   const address = '0xA50C1a64Fc9cEbD4a134DC078189Ee2A1a3ACe93';
@@ -157,6 +158,9 @@ const Promo = ({  }) => {
             )}
             {sellStatus === 'sold out' && (
               <button className='btn btn_outline btn_disabled'>Sold Out</button>
+            )}
+            {sellStatus === 'paused' && (
+              <button className='btn btn_outline btn_disabled'>Paused</button>
             )}
             {sellStatus === 'connect wallet' && (
               <button onClick={connectWallet} className='btn btn_outline btn_disabled'>Connect Wallet</button>

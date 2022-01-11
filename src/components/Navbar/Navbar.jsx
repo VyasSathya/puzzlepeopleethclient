@@ -77,7 +77,7 @@ const Navbar = () => {
         <a href='https://twitter.com/PuzzlePeopleNFT'>
           <img src={twitterIcon} alt='twitter' />
         </a>
-        <a href='https://opensea.io/collection/puzzlepeoplenft'>
+        <a href='https://discord.gg/puzzlepeople'>
           <img src={discordIcon} alt='discord' />
         </a>
       </div>
