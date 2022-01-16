@@ -42,8 +42,8 @@ const Team = () => {
         <figure className='team__member'>
           <img src={fuego} alt='fuego' loading='lazy' />
           <figcaption>
-            <h4>DanGoodmanX</h4>
-            <p>Game Development</p>
+            <h4>Octoberman</h4>
+            <p>Media</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
@@ -56,7 +56,7 @@ const Team = () => {
         <figure className='team__member'>
           <img src={tapz} alt='tapz' loading='lazy' />
           <figcaption>
-            <h4>Rat</h4>
+            <h4>VRat</h4>
             <p>Stupid Idiot</p>
           </figcaption>
         </figure>
