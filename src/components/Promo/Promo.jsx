@@ -195,8 +195,8 @@ const Promo = ({  }) => {
                   className='promo-mint__button btn'
                 >
                   {/* pretomain */}
-                  {/* Mint {(mintValue * 0.025).toFixed(3)} ETH */}
-                  Mint {(mintValue * 0.03).toFixed(2)} ETH
+                  Mint {(mintValue * 0).toFixed(2)} ETH
+                  {/* Mint {(mintValue * 0.03).toFixed(2)} ETH */}
                 </button>
                 <div className='promo-mint__remain'>
                   <span>{remainingPups}</span>/10000{' '}
