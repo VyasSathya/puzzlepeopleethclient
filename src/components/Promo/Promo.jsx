@@ -9,11 +9,12 @@ const Promo = ({  }) => {
   // const [isDepositInputShown, setDepositInputShown] = useState(false)
   // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPups, setRemainingPups] = useState('10000')
-  // const [sellStatus, setSellStatus] = useState('connect wallet')
-  const [sellStatus, setSellStatus] = useState('paused')
+  const [sellStatus, setSellStatus] = useState('connect wallet')
+  // const [sellStatus, setSellStatus] = useState('paused')
   const [depositValue, setDepositValue] = useState(1)
   const [mintValue, setMintValue] = useState(1)
-  const address = '0xA50C1a64Fc9cEbD4a134DC078189Ee2A1a3ACe93';
+  const address = '0x20C758FfEBB5508512D2e9435674911910D90a46';
+  const publicSaleKey = '925429';
 
   const connectWallet = async () => {
     console.log('calling');
@@ -105,13 +106,15 @@ const Promo = ({  }) => {
       console.log('NFT Left: ', tokensLeft);
       setRemainingPups(tokensLeft);
       console.log( 'Number to buy: ', num );
-      const currPrice = await MyContract.methods.getPrice().call();
+      // pretomain
+      const currPrice = await MyContract.methods.getListMintPrice().call();
+      // const currPrice = await MyContract.methods.getPublicSalePrice().call();
       console.log( 'Current price: ', currPrice );
       const requiredAmount = ( currPrice * num ).toString();
       console.log('Amount to be sent: ', requiredAmount);
       // pretomain
-      // const val = await MyContract.methods.mintPresale( num ).send({
-      const val = await MyContract.methods.mintMainsale( num ).send({
+      const val = await MyContract.methods.allowListMint( num, publicSaleKey ).send({
+      // const val = await MyContract.methods.publicSaleMint( num, publicSaleKey ).send({
         from: myAccount,
         gasPrice: "201000000000",
         value: requiredAmount,
@@ -129,8 +132,8 @@ const Promo = ({  }) => {
   }
   const increaseMint = () => {
     // pretomain
-    // if (mintValue < 3) {
-    if (mintValue < 5) {
+    // if (mintValue < 20) {
+    if (mintValue < 20) {
       setMintValue(mintValue + 1)
     }
   }
@@ -145,9 +148,9 @@ const Promo = ({  }) => {
           <p>
             Puzzle People is a collection of 10,000 people looking for a place to call home. <br />
             <br />
-            The Presale starts on January 7th @ 7PM EST at 0.025 eth <br />
+            OG Holder Mint starts Sunday January 16th @ 9PM EST <br />
             <br />
-            The Mainsale starts on January 9th @ 7PM EST at 0.030 eth.
+            Public Sale starts Tuesday January 18th @ 9PM EST at 0.03 eth.
             <br /><br />
              </p>
           <div className='promo__descr-btns wow fadeInUp' data-wow-delay='2s'>
@@ -193,7 +196,7 @@ const Promo = ({  }) => {
                 >
                   {/* pretomain */}
                   {/* Mint {(mintValue * 0.025).toFixed(3)} ETH */}
-                  Mint {(mintValue * 0.030).toFixed(3)} ETH
+                  Mint {(mintValue * 0.03).toFixed(2)} ETH
                 </button>
                 <div className='promo-mint__remain'>
                   <span>{remainingPups}</span>/10000{' '}
