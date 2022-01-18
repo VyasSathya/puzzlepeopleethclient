@@ -150,7 +150,7 @@ const Promo = ({  }) => {
             <br />
             OG Holder Mint starts Sunday January 16th @ 9PM EST <br />
             <br />
-            Public Sale starts Tuesday January 18th @ 9PM EST at 0.03 eth.
+            Public Sale starts Saturday January 17th @ 7PM EST at 0.03 eth.
             <br /><br />
              </p>
           <div className='promo__descr-btns wow fadeInUp' data-wow-delay='2s'>
