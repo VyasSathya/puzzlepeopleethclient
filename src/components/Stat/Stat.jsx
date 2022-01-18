@@ -15,7 +15,7 @@ const Stat = () => {
             <p>Unique art pieces themed from puzzles</p>
           </div>
           <div className='stat__single-sign stat__single-sign_s2'>
-            <h4>200</h4>
+            <h4>500</h4>
             <p>NFTs being withheld from the sale for giveaways</p>
           </div>
           <div className='stat__single-sign stat__single-sign_s3'>
