@@ -21,42 +21,42 @@ const Team = () => {
         <figure className='team__member'>
           <img src={pete} alt='pete' loading='lazy' />
           <figcaption>
-            <h4>V4nimaL</h4>
+            <h4>V4nimaL (Vyas)</h4>
             <p>Art and Code</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
           <img src={nakajta} alt='nakajta' loading='lazy' />
           <figcaption>
-            <h4>SaintJPow</h4>
+            <h4>SaintJPow (Suraj)</h4>
             <p>Discord Management</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
           <img src={wilzor} alt='wilzor' loading='lazy' />
           <figcaption>
-            <h4>Huuto</h4>
+            <h4>Mdpvs_98 (Maria)</h4>
             <p>Puzzle Creator</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
           <img src={fuego} alt='fuego' loading='lazy' />
           <figcaption>
-            <h4>Octoberman</h4>
+            <h4>Octoberman (Jonny)</h4>
             <p>Media</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
           <img src={azard} alt='azard' loading='lazy' />
           <figcaption>
-            <h4>Camron</h4>
+            <h4>Camron (Camron)</h4>
             <p>Mod manager</p>
           </figcaption>
         </figure>
         <figure className='team__member'>
           <img src={tapz} alt='tapz' loading='lazy' />
           <figcaption>
-            <h4>VRat</h4>
+            <h4>VRat (Raj)</h4>
             <p>Stupid Idiot</p>
           </figcaption>
         </figure>

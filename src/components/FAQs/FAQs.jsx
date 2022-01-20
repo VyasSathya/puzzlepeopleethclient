@@ -11,7 +11,7 @@ const faqData = [
   {
     id: 2,
     title: 'When will Puzzle People launch?',
-    body: 'The mint will be launched on January 22nd, at 7pm EST and the mainsale will be launched on January 9th, at 7pm EST.',
+    body: 'The mint will be launched on January 22nd, at 7pm EST.',
   },
   {
     id: 3,
