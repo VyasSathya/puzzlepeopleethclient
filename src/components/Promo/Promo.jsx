@@ -107,16 +107,16 @@ const Promo = ({  }) => {
       setRemainingPups(tokensLeft);
       console.log( 'Number to buy: ', num );
       // pretomain
-      const currPrice = await MyContract.methods.getListMintPrice().call();
-      // const currPrice = await MyContract.methods.getPublicSalePrice().call();
+      // const currPrice = await MyContract.methods.getListMintPrice().call();
+      const currPrice = await MyContract.methods.getPublicSalePrice().call();
       console.log( 'Current price: ', currPrice );
       const requiredAmount = ( currPrice * num ).toString();
       console.log('Amount to be sent: ', requiredAmount);
       // pretomain
-      const val = await MyContract.methods.allowListMint( num, publicSaleKey ).send({
-      // const val = await MyContract.methods.publicSaleMint( num, publicSaleKey ).send({
+      // const val = await MyContract.methods.allowListMint( num, publicSaleKey ).send({
+      const val = await MyContract.methods.publicSaleMint( num, publicSaleKey ).send({
         from: myAccount,
-        gasPrice: "160000000000",
+        gasPrice: "121000000000",
         value: requiredAmount,
       });
       console.log(val);
@@ -193,8 +193,8 @@ const Promo = ({  }) => {
                   className='promo-mint__button btn'
                 >
                   {/* pretomain */}
-                  Mint {(mintValue * 0).toFixed(2)} ETH
-                  {/* Mint {(mintValue * 0.03).toFixed(2)} ETH */}
+                  {/* Mint {(mintValue * 0).toFixed(2)} ETH */}
+                  Mint {(mintValue * 0.03).toFixed(2)} ETH
                 </button>
                 <div className='promo-mint__remain'>
                   <span>{remainingPups}</span>/10000{' '}
