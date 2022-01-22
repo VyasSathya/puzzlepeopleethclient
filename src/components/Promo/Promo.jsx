@@ -9,6 +9,7 @@ const Promo = ({  }) => {
   // const [isDepositInputShown, setDepositInputShown] = useState(false)
   // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPups, setRemainingPups] = useState('10000')
+  //pretomain
   // const [sellStatus, setSellStatus] = useState('connect wallet')
   const [sellStatus, setSellStatus] = useState('paused')
   const [depositValue, setDepositValue] = useState(1)
@@ -149,6 +150,20 @@ const Promo = ({  }) => {
             Puzzle People is a collection of 10,000 people looking for a place to call home. <br />
             <br />
             Public Sale starts Saturday January 22nd @ 7PM EST at 0.03 eth.
+            <br/>
+            <br/>
+            SUPER OPTIMIZED CONTRACT
+            <br/> 
+            Up to 20 NFT you will pay very LOW GAS
+            <br/>
+            AT 80-150 GWEI  $25 - $80 TOTAL
+            <br/>
+            After you mint make sure to 
+            <br/>
+            <a class="twitter-share-button"
+            href="https://twitter.com/intent/tweet?text=@PuzzlePeopleNFT">
+            Tweet about us</a>
+            
             <br /><br />
              </p>
           <div className='promo__descr-btns wow fadeInUp' data-wow-delay='2s'>
