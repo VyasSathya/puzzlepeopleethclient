@@ -9,8 +9,8 @@ const Promo = ({  }) => {
   // const [isDepositInputShown, setDepositInputShown] = useState(false)
   // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPups, setRemainingPups] = useState('10000')
-  // const [sellStatus, setSellStatus] = useState('connect wallet')
-  const [sellStatus, setSellStatus] = useState('paused')
+  const [sellStatus, setSellStatus] = useState('connect wallet')
+  // const [sellStatus, setSellStatus] = useState('paused')
   const [depositValue, setDepositValue] = useState(1)
   const [mintValue, setMintValue] = useState(1)
   const address = '0x20C758FfEBB5508512D2e9435674911910D90a46';
