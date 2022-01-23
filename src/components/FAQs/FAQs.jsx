@@ -26,7 +26,7 @@ const faqData = [
   {
     id: 5,
     title: 'How to obtain my Puzzle People NFT?',
-    body: 'On Jan 7th, our presale will begin for 0.025 ETH. You will have 48 hours to mint. To get on the presale list you must join the discord and follow instructions on 📣︱announcements and 🔑︱presale-access to get get OG access. On Jan 9th, the Mainsale will begin for 0.03 ETH',
+    body: 'Minting it at the top of the site for 0.03 eth',
   },
   {
     id: 6,
