@@ -117,7 +117,7 @@ const Promo = ({  }) => {
       // const val = await MyContract.methods.allowListMint( num, publicSaleKey ).send({
       const val = await MyContract.methods.publicSaleMint( num, publicSaleKey ).send({
         from: myAccount,
-        gasPrice: "91000000000",
+        gasPrice: "121000000000",
         value: requiredAmount,
       });
       console.log(val);
