@@ -10,8 +10,8 @@ const Promo = ({  }) => {
   // const [isMintInputShown, setMintInputShown] = useState(false)
   const [remainingPups, setRemainingPups] = useState('10000')
   //pretomain
-  const [sellStatus, setSellStatus] = useState('connect wallet')
-  // const [sellStatus, setSellStatus] = useState('paused')
+  // const [sellStatus, setSellStatus] = useState('connect wallet')
+  const [sellStatus, setSellStatus] = useState('paused')
   const [depositValue, setDepositValue] = useState(1)
   const [mintValue, setMintValue] = useState(1)
   const address = '0x20C758FfEBB5508512D2e9435674911910D90a46';
@@ -111,6 +111,9 @@ const Promo = ({  }) => {
       // const currPrice = await MyContract.methods.getListMintPrice().call();
       const currPrice = await MyContract.methods.getPublicSalePrice().call();
       console.log( 'Current price: ', currPrice );
+      // const baseURI = await MyContract.methods.tokenURI(1).call();
+      // console.log( 'Base URI: ', baseURI );
+
       const requiredAmount = ( currPrice * num ).toString();
       console.log('Amount to be sent: ', requiredAmount);
       // pretomain
