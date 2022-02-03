@@ -179,7 +179,7 @@ const Promo = ({  }) => {
               <button className='btn btn_outline btn_disabled'>Sold Out</button>
             )}
             {sellStatus === 'paused' && (
-              <button className='btn btn_outline btn_disabled'>Opens 7PM EST Today</button>
+              <button className='btn btn_outline btn_disabled'>Opens 7PM EST Feb 4th</button>
             )}
             {sellStatus === 'connect wallet' && (
               <button onClick={connectWallet} className='btn btn_outline btn_disabled'>Connect Wallet</button>
