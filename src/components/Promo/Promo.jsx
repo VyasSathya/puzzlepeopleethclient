@@ -152,7 +152,7 @@ const Promo = ({  }) => {
           <p>
             Puzzle People is a collection of 10,000 people looking for a place to call home. <br />
             <br />
-            Public Sale starts Saturday January 22nd @ 7PM EST at 0.03 eth.
+            MINTING LIVE!!
             <br/>
             <br/>
             SUPER OPTIMIZED CONTRACT
